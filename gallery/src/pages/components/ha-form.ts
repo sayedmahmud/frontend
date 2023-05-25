@@ -6,6 +6,7 @@ import { mockAreaRegistry } from "../../../../demo/src/stubs/area_registry";
 import { mockConfigEntries } from "../../../../demo/src/stubs/config_entries";
 import { mockDeviceRegistry } from "../../../../demo/src/stubs/device_registry";
 import { mockEntityRegistry } from "../../../../demo/src/stubs/entity_registry";
+import { mockLabelRegistry } from "../../../../demo/src/stubs/label_registry";
 import { mockHassioSupervisor } from "../../../../demo/src/stubs/hassio_supervisor";
 import { computeInitialHaFormData } from "../../../../src/components/ha-form/compute-initial-ha-form-data";
 import "../../../../src/components/ha-form/ha-form";
@@ -57,6 +58,7 @@ const DEVICES = [
     sw_version: null,
     hw_version: null,
     via_device_id: null,
+    labels: [],
   },
   {
     area_id: "backyard",
@@ -74,6 +76,7 @@ const DEVICES = [
     sw_version: null,
     hw_version: null,
     via_device_id: null,
+    labels: [],
   },
   {
     area_id: null,
@@ -91,6 +94,7 @@ const DEVICES = [
     sw_version: null,
     hw_version: null,
     via_device_id: null,
+    labels: [],
   },
 ];
 
@@ -115,6 +119,30 @@ const AREAS = [
   },
 ];
 
+const LABELS = [
+  {
+    label_id: "romantic",
+    name: "Romantic",
+    icon: "mdi:heart",
+    color: "#ff0000",
+    description: "Lights that can create a romantic atmosphere",
+  },
+  {
+    label_id: "away",
+    name: "Away",
+    icon: "mdi:home-export-outline",
+    color: "#cccccc",
+    description: "All that can all be turned off when away from home",
+  },
+  {
+    label_id: "cleaning",
+    name: "Cleaning",
+    icon: "mdi:home-export-outline",
+    color: "#cccccc",
+    description: "Everything to turn on while cleaning the house",
+  },
+];
+
 const SCHEMAS: {
   title: string;
   translations?: Record<string, string>;
@@ -129,6 +157,7 @@ const SCHEMAS: {
       entity: "Entity",
       device: "Device",
       area: "Area",
+      label: "Label",
       target: "Target",
       number: "Number",
       boolean: "Boolean",
@@ -160,6 +189,7 @@ const SCHEMAS: {
       { name: "Config entry", selector: { config_entry: {} } },
       { name: "Duration", selector: { duration: {} } },
       { name: "area", selector: { area: {} } },
+      { name: "label", selector: { label: {} } },
       { name: "target", selector: { target: {} } },
       { name: "number", selector: { number: { min: 0, max: 10 } } },
       { name: "boolean", selector: { boolean: {} } },
@@ -441,6 +471,7 @@ class DemoHaForm extends LitElement {
     mockDeviceRegistry(hass, DEVICES);
     mockConfigEntries(hass);
     mockAreaRegistry(hass, AREAS);
+    mockLabelRegistry(hass, LABELS);
     mockHassioSupervisor(hass);
   }
 

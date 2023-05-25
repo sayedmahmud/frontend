@@ -310,6 +310,7 @@ export const provideHass = (
     areas: {},
     devices: {},
     entities: {},
+    labels: {},
     ...overrideData,
   };
 
