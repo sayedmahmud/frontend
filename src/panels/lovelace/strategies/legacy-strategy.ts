@@ -1,4 +1,8 @@
-import { LovelaceConfig, LovelaceViewConfig } from "../../../data/lovelace";
+import {
+  LovelaceConfig,
+  LovelaceStrategyConfig,
+  LovelaceViewConfig,
+} from "../../../data/lovelace";
 import { HomeAssistant } from "../../../types";
 
 export const isLegacyStrategy = (
@@ -20,3 +24,16 @@ export interface LovelaceViewStrategy {
     hass: HomeAssistant;
   }): Promise<LovelaceViewConfig>;
 }
+
+export const cleanStrategyConfig = (config: LovelaceStrategyConfig) => {
+  if (!(Object.keys(config).length === 2 && "options" in config)) {
+    return config;
+  }
+  const cleanedConfig = {
+    ...config,
+    ...config.options,
+  };
+
+  delete cleanedConfig.options;
+  return cleanedConfig;
+};
