@@ -25,7 +25,7 @@ export interface LovelaceViewStrategy {
   }): Promise<LovelaceViewConfig>;
 }
 
-export const cleanStrategyConfig = (config: LovelaceStrategyConfig) => {
+export const cleanLegacyStrategyConfig = (config: LovelaceStrategyConfig) => {
   if (!(Object.keys(config).length === 2 && "options" in config)) {
     return config;
   }

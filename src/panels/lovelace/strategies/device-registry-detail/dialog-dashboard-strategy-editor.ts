@@ -11,7 +11,7 @@ import type { HuiDashboardStrategyElementEditor } from "../../editor/dashboard-s
 import { ConfigChangedEvent } from "../../editor/hui-element-editor";
 import { GUIModeChangedEvent } from "../../editor/types";
 import type { DashboardStrategyEditorDialogParams } from "./show-dialog-dashboard-strategy-editor";
-import { cleanStrategyConfig } from "../legacy-strategy";
+import { cleanLegacyStrategyConfig } from "../legacy-strategy";
 
 @customElement("dialog-dashboard-strategy-editor")
 class DialogDashboardStrategyEditor extends LitElement {
@@ -76,7 +76,7 @@ class DialogDashboardStrategyEditor extends LitElement {
       return nothing;
     }
 
-    const config = cleanStrategyConfig(this._strategyConfig);
+    const config = cleanLegacyStrategyConfig(this._strategyConfig);
 
     return html`
       <ha-dialog
