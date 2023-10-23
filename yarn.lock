@@ -2097,12 +2097,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/motion@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@lit-labs/motion@npm:1.0.4"
+"@lit-labs/motion@npm:1.0.5":
+  version: 1.0.5
+  resolution: "@lit-labs/motion@npm:1.0.5"
   dependencies:
-    lit: ^2.8.0
-  checksum: 79ed93d6cd40e253c5a90b50f110e67ff034d6d7a8a3dac9d94ef7f9125acf8f2f770d4e0b55c2b2a86bee360467184eaff24589ca03710fb5809cc8d15287db
+    lit: ^3.0.0
+  checksum: ba53e1b41ad05be7cfe46cfd4da5ed9dfa84d76053a153f66234c0b0e878987c09f5f985313455b3b7b2aad0dd6b13474ba464abba3a64bdb1f3851726dd72a8
   languageName: node
   linkType: hard
 
@@ -9653,7 +9653,7 @@ __metadata:
     "@koa/cors": 4.0.0
     "@lezer/highlight": 1.1.6
     "@lit-labs/context": 0.4.1
-    "@lit-labs/motion": 1.0.4
+    "@lit-labs/motion": 1.0.5
     "@lit-labs/observers": 2.0.1
     "@lit-labs/virtualizer": 2.0.7
     "@lokalise/node-api": 12.0.0
@@ -11444,12 +11444,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lit-element@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "lit-element@npm:4.0.0"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.2-pre.0
+    "@lit/reactive-element": ^2.0.0
+    lit-html: ^3.0.0
+  checksum: 788ea8ed0883d656583843dc4bbdfcb698f3a4c442a529bf861131e5741239e1076e8809e29b7733dccf6baea72a827aa3cccd444aca2ebe1dd04409608753f9
+  languageName: node
+  linkType: hard
+
 "lit-html@npm:^2.8.0":
   version: 2.8.0
   resolution: "lit-html@npm:2.8.0"
   dependencies:
     "@types/trusted-types": ^2.0.2
   checksum: 2d70df07248bcb2f502a3afb1e91d260735024fa669669ffb1417575aa39c3092779725ac1b90f5f39e4ce78c63f431f51176bc67f532389f0285a6991573255
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lit-html@npm:3.0.0"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 1df6bc84a30b9f848962483f456fe820ddac0f836476af8e2e01e4388def21afc129631acde2ad29c761df724b932ddd4d5be87146d8e98c25bc049076f3e4b8
   languageName: node
   linkType: hard
 
@@ -11472,6 +11492,17 @@ __metadata:
     lit-element: ^3.3.0
     lit-html: ^2.8.0
   checksum: 2480e733f7d022d3ecba91abc58a20968f0ca8f5fa30b3341ecf4bcf4845e674ad27b721a5ae53529cafc6ca603c015b80d0979ceb7a711e268ef20bb6bc7527
+  languageName: node
+  linkType: hard
+
+"lit@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lit@npm:3.0.0"
+  dependencies:
+    "@lit/reactive-element": ^2.0.0
+    lit-element: ^4.0.0
+    lit-html: ^3.0.0
+  checksum: 562e53d2902112f55949ff92244ab7a198abdd35455657e364f866954958b22f536f79c02f11a12f00f5b69799e28d4e27917fb120d7216491cb2a526b5ee718
   languageName: node
   linkType: hard
 
