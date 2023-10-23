@@ -2087,13 +2087,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/context@npm:0.4.1":
-  version: 0.4.1
-  resolution: "@lit-labs/context@npm:0.4.1"
+"@lit-labs/context@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@lit-labs/context@npm:0.5.0"
   dependencies:
-    "@lit/reactive-element": ^1.5.0
-    lit: ^2.7.0
-  checksum: 0f5bf4bd0beb4ff97c0df990997f0d56872682d8597e39f43cb5171aa3b7a53c7a0fc2e16f710282d7abe93c5d6ff6dd52b096d1682df277439cec47291b8023
+    "@lit/context": 1.0.0
+  checksum: dfad451a86f82039fc1046c5437b7ff8094e7d80ce4a92027a5d683e618e0f722351bf6cbadcfd31d44e0cadb81b852f59062f6d8e23f62ca52caebf7bd5370d
   languageName: node
   linkType: hard
 
@@ -2132,7 +2131,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.5.0, @lit/reactive-element@npm:^1.6.0":
+"@lit/context@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@lit/context@npm:1.0.0"
+  dependencies:
+    "@lit/reactive-element": ^1.6.2 || ^2.0.0
+    lit: ^2.7.5 || ^3.0.0
+  checksum: fe9a237ba79c2cf41dec1fbf31ca7a46593e64f549aa72ef11d83f32d6a4881bbd768ce9591e2b1a83ba1c8f5cae260d3f044c729c6f8d291771225b535bd588
+  languageName: node
+  linkType: hard
+
+"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
   version: 1.6.3
   resolution: "@lit/reactive-element@npm:1.6.3"
   dependencies:
@@ -2141,7 +2150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit/reactive-element@npm:^2.0.0":
+"@lit/reactive-element@npm:^1.6.2 || ^2.0.0, @lit/reactive-element@npm:^2.0.0":
   version: 2.0.0
   resolution: "@lit/reactive-element@npm:2.0.0"
   dependencies:
@@ -9652,7 +9661,7 @@ __metadata:
     "@fullcalendar/timegrid": 6.1.9
     "@koa/cors": 4.0.0
     "@lezer/highlight": 1.1.6
-    "@lit-labs/context": 0.4.1
+    "@lit-labs/context": 0.5.0
     "@lit-labs/motion": 1.0.4
     "@lit-labs/observers": 2.0.1
     "@lit-labs/virtualizer": 2.0.7
@@ -11444,12 +11453,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lit-element@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "lit-element@npm:4.0.0"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.2-pre.0
+    "@lit/reactive-element": ^2.0.0
+    lit-html: ^3.0.0
+  checksum: 788ea8ed0883d656583843dc4bbdfcb698f3a4c442a529bf861131e5741239e1076e8809e29b7733dccf6baea72a827aa3cccd444aca2ebe1dd04409608753f9
+  languageName: node
+  linkType: hard
+
 "lit-html@npm:^2.8.0":
   version: 2.8.0
   resolution: "lit-html@npm:2.8.0"
   dependencies:
     "@types/trusted-types": ^2.0.2
   checksum: 2d70df07248bcb2f502a3afb1e91d260735024fa669669ffb1417575aa39c3092779725ac1b90f5f39e4ce78c63f431f51176bc67f532389f0285a6991573255
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lit-html@npm:3.0.0"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 1df6bc84a30b9f848962483f456fe820ddac0f836476af8e2e01e4388def21afc129631acde2ad29c761df724b932ddd4d5be87146d8e98c25bc049076f3e4b8
   languageName: node
   linkType: hard
 
@@ -11464,7 +11493,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:2.8.0, lit@npm:^2.0.0, lit@npm:^2.0.0-rc.2, lit@npm:^2.2.1, lit@npm:^2.7.0, lit@npm:^2.7.4, lit@npm:^2.8.0":
+"lit@npm:2.8.0, lit@npm:^2.0.0, lit@npm:^2.0.0-rc.2, lit@npm:^2.2.1, lit@npm:^2.7.4, lit@npm:^2.8.0":
   version: 2.8.0
   resolution: "lit@npm:2.8.0"
   dependencies:
@@ -11472,6 +11501,17 @@ __metadata:
     lit-element: ^3.3.0
     lit-html: ^2.8.0
   checksum: 2480e733f7d022d3ecba91abc58a20968f0ca8f5fa30b3341ecf4bcf4845e674ad27b721a5ae53529cafc6ca603c015b80d0979ceb7a711e268ef20bb6bc7527
+  languageName: node
+  linkType: hard
+
+"lit@npm:^2.7.5 || ^3.0.0":
+  version: 3.0.0
+  resolution: "lit@npm:3.0.0"
+  dependencies:
+    "@lit/reactive-element": ^2.0.0
+    lit-element: ^4.0.0
+    lit-html: ^3.0.0
+  checksum: 562e53d2902112f55949ff92244ab7a198abdd35455657e364f866954958b22f536f79c02f11a12f00f5b69799e28d4e27917fb120d7216491cb2a526b5ee718
   languageName: node
   linkType: hard
 
